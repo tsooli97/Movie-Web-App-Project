@@ -85,19 +85,15 @@ function getPopular() {
           <h1>${movie.title}</h1>
           <div class="divinfo">Audience score:</div>
           <p class="info" id="score">${movie.vote_average}</p>
-          <p class="info"><b>Release date</b><br><br> ${movie.release_date}</p>
-          <p class="info"><b>Synopsis</b><br><br>${movie.overview}</p>
-
-          
-          
-      `;
+          <p class="info"><b>Release date</b><br>${movie.release_date}</p>
+          <p class="info"><b>Synopsis</b><br>${movie.overview}</p>`;
         //Execute another API call to receive credits data for each of the displayed movies using their individual IDs
         fetch(`https://api.themoviedb.org/3/movie/${movie.id}/credits?api_key=f9529df55c21297befabf884ef67bc77&language=en-US`)
          .then (response => response.json())
          .then (creditsData => {
 
             console.log(creditsData.cast);
-            featuredMovie.innerHTML += `<p class="info"><b>Cast</b><br><br>${creditsData.cast[0].name}, ${creditsData.cast[1].name}, ${creditsData.cast[2].name}, ${creditsData.cast[3].name}, ${creditsData.cast[4].name}</p>` + '<hr id="line">';
+            featuredMovie.innerHTML += `<p class="info"><b>Cast</b><br>${creditsData.cast[0].name}, ${creditsData.cast[1].name}, ${creditsData.cast[2].name}, ${creditsData.cast[3].name}, ${creditsData.cast[4].name}</p>` + '<hr id="line">';
 
          });
 
@@ -199,19 +195,15 @@ function getUpcoming() {
       featuredMovie.innerHTML = `
       <img id="poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}" />
         <h1>${movie.title}</h1>
-        <p class="info"><b>Release date</b><br><br> ${movie.release_date}</p>
-        <p class="info"><b>Synopsis</b><br><br>${movie.overview}</p>
-
-        
-        
-    `;
+        <p class="info"><b>Release date</b><br>${movie.release_date}</p>
+        <p class="info"><b>Synopsis</b><br>${movie.overview}</p>`;
 
       fetch (`https://api.themoviedb.org/3/movie/${movie.id}/credits?api_key=f9529df55c21297befabf884ef67bc77&language=en-US`)
        .then (response => response.json())
        .then (creditsData => {
 
           console.log(creditsData.cast);
-          featuredMovie.innerHTML += `<p class="info"><b>Cast</b><br><br>${creditsData.cast[0].name}, ${creditsData.cast[1].name}, ${creditsData.cast[2].name}, ${creditsData.cast[3].name}, ${creditsData.cast[4].name}</p>` + '<hr id="line">';
+          featuredMovie.innerHTML += `<p class="info"><b>Cast</b><br>${creditsData.cast[0].name}, ${creditsData.cast[1].name}, ${creditsData.cast[2].name}, ${creditsData.cast[3].name}, ${creditsData.cast[4].name}</p>` + '<hr id="line">';
 
        });
        //Add an eventlistener to each movie div element that activates when an user clicks on it
@@ -303,15 +295,15 @@ function getTopRated() {
         <h1>${movie.title}</h1>
         <div class="divinfo">Audience score:</div>
         <p class="info" id="score">${movie.vote_average}</p>
-        <p class="info"><b>Release date</b><br><br> ${movie.release_date}</p>
-        <p class="info"><b>Synopsis</b><br><br>${movie.overview}</p>`;
+        <p class="info"><b>Release date</b><br>${movie.release_date}</p>
+        <p class="info"><b>Synopsis</b><br>${movie.overview}</p>`;
 
         fetch (`https://api.themoviedb.org/3/movie/${movie.id}/credits?api_key=f9529df55c21297befabf884ef67bc77&language=en-US`)
         .then (response => response.json())
           .then (creditsData => {
 
           console.log(creditsData.cast);
-          featuredMovie.innerHTML += `<p class="info"><b>Cast</b><br><br>${creditsData.cast[0].name}, ${creditsData.cast[1].name}, ${creditsData.cast[2].name}, ${creditsData.cast[3].name}, ${creditsData.cast[4].name}</p>` + '<hr id="line">';
+          featuredMovie.innerHTML += `<p class="info"><b>Cast</b><br>${creditsData.cast[0].name}, ${creditsData.cast[1].name}, ${creditsData.cast[2].name}, ${creditsData.cast[3].name}, ${creditsData.cast[4].name}</p>` + '<hr id="line">';
 
          });
          //Add an eventlistener to each movie div element that activates when an user clicks on it
@@ -401,19 +393,15 @@ data.results.forEach(movie => {
           <h1>${movie.title}</h1>
           <div class="divinfo">Audience score:</div>
           <p class="info" id="score">${movie.vote_average}</p>
-          <p class="info"><b>Release date</b><br><br> ${movie.release_date}</p>
-          <p class="info"><b>Synopsis</b><br><br>${movie.overview}</p>
-
-          
-          
-      `;
+          <p class="info"><b>Release date</b><br>${movie.release_date}</p>
+          <p class="info"><b>Synopsis</b><br>${movie.overview}</p>`;
 
         fetch (`https://api.themoviedb.org/3/movie/${movie.id}/credits?api_key=f9529df55c21297befabf884ef67bc77&language=en-US`)
          .then (response => response.json())
          .then (creditsData => {
 
             console.log(creditsData.cast);
-            featuredMovie.innerHTML += `<p class="info"><b>Cast</b><br><br>${creditsData.cast[0].name}, ${creditsData.cast[1].name}, ${creditsData.cast[2].name}, ${creditsData.cast[3].name}, ${creditsData.cast[4].name}</p>` + '<hr id="line">';
+            featuredMovie.innerHTML += `<p class="info"><b>Cast</b><br>${creditsData.cast[0].name}, ${creditsData.cast[1].name}, ${creditsData.cast[2].name}, ${creditsData.cast[3].name}, ${creditsData.cast[4].name}</p>` + '<hr id="line">';
 
          });
          //Add an eventlistener to each movie div element that activates when an user clicks on it
