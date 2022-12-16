@@ -105,6 +105,7 @@ input:focus::placeholder {
 #line {
     border-top: 8px solid #bbb;
     border-radius: 5px;
+    
 }
 
 #score {
@@ -139,17 +140,18 @@ input:focus::placeholder {
   }
   
   .modal-content {
-    background-color: #fefefe;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(223,249,255,1) 49%);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 10px;
     width: 80%;
   }
   
   .close-button {
-    color: #aaa;
     float: right;
-    margin-top: -15%;
+    margin-top: -160px;
     margin-right: -10px;
     font-size: 28px;
     font-weight: bold;

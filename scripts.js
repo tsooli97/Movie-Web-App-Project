@@ -162,6 +162,9 @@ function getPopular() {
             } else {
               document.getElementById("modal-body7").innerHTML += "Box office unknown.";
             }
+
+            document.getElementById("modal-body8").innerHTML = '<b>Homepage:</b><br>';
+            document.getElementById("modal-body8").innerHTML += `<a href="${data[2].homepage}" target="_blank">${data[2].homepage}</a>`
             document.getElementById("modal").style.display = "block";
             
             
@@ -265,6 +268,8 @@ function getUpcoming() {
               document.getElementById("modal-body7").innerHTML += "Box office unknown.";
             }
 
+            document.getElementById("modal-body8").innerHTML = '<b>Homepage:</b><br>';
+            document.getElementById("modal-body8").innerHTML += `<a href="${data[2].homepage}" target="_blank">${data[2].homepage}</a>`
             document.getElementById("modal").style.display = "block";
             
             
@@ -362,7 +367,10 @@ function getTopRated() {
             } else {
               document.getElementById("modal-body7").innerHTML += "Box office unknown.";
             }
-              document.getElementById("modal").style.display = "block";
+
+            document.getElementById("modal-body8").innerHTML = '<b>Homepage:</b><br>';
+            document.getElementById("modal-body8").innerHTML += `<a href="${data[2].homepage}" target="_blank">${data[2].homepage}</a>`
+            document.getElementById("modal").style.display = "block";
               
               
             });
@@ -462,7 +470,10 @@ data.results.forEach(movie => {
             } else {
               document.getElementById("modal-body7").innerHTML += "Box office unknown.";
             }
-              document.getElementById("modal").style.display = "block";
+
+            document.getElementById("modal-body8").innerHTML = '<b>Homepage:</b><br>';
+            document.getElementById("modal-body8").innerHTML += `<a href="${data[2].homepage}" target="_blank">${data[2].homepage}</a>`
+            document.getElementById("modal").style.display = "block";
               
               
             });
