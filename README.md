@@ -6,5 +6,9 @@ This HTML page powered by Javascript allows the user to browse trending movies, 
 ![Preview of the website when first loaded](https://i.imgur.com/8546lpG.png)
 
 
+You can test the site at:
+https://elegant-baklava-1864b2.netlify.app/
+
+
 
 By Joel Isotalo
