@@ -10,5 +10,6 @@ You can test the site at:
 https://elegant-baklava-1864b2.netlify.app/
 
 
+Based on the project criteria I'm hoping to get 20-25 points for this assignment.
 
 By Joel Isotalo
