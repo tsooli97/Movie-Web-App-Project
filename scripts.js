@@ -1,4 +1,7 @@
-// Add an event listener to the DOM which executes the "getPopular()" function when the DOM content has been fully loaded.
+// By Joel Isotalo
+
+
+// This code adds an event listener to the DOM which executes the "getPopular()" function when the DOM content has been fully loaded.
 document.addEventListener("DOMContentLoaded", function() {
     getPopular();
   });
@@ -292,8 +295,10 @@ function getTopRated() {
         featuredMovie.innerHTML = `
         <img id="poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}" />
         <h1>${movie.title}</h1>
-        <div class="divinfo">Audience score:</div>
-        <p class="info" id="score">${parseFloat(movie.vote_average).toFixed(1)}</p>
+        <div class="score-container">
+			<span class="divinfo">Audience score:</span>
+		    <p class="info" id="score">${parseFloat(movie.vote_average).toFixed(1)}</p>
+		</div>
         <p class="info"><b>Release date</b><br>${movie.release_date}</p>
         <p class="info"><b>Synopsis</b><br>${movie.overview}</p>`;
 
@@ -390,8 +395,10 @@ data.results.forEach(movie => {
         featuredMovie.innerHTML = `
         <img id="poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}" />
           <h1>${movie.title}</h1>
-          <div class="divinfo">Audience score:</div>
-          <p class="info" id="score">${parseFloat(movie.vote_average).toFixed(1)}</p>
+          <div class="score-container">
+			<span class="divinfo">Audience score:</span>
+		    <p class="info" id="score">${parseFloat(movie.vote_average).toFixed(1)}</p>
+		  </div>
           <p class="info"><b>Release date</b><br>${movie.release_date}</p>
           <p class="info"><b>Synopsis</b><br>${movie.overview}</p>`;
 
