@@ -184,13 +184,11 @@ input:focus::placeholder {
     font-size: 150%;
 }
 
-#modal-body3 {
+#score, #modal-body3 {
     font-size: 150%;
-    padding: 5px;
-    display: flex;
+    padding: 5px 10px; 
+    display: inline-block; 
     background-color: rgb(138, 179, 255);
-    width: 29px;
     border-radius: 5px;
-  
+    text-align: center; 
 }
-
