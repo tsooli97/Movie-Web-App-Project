@@ -1,6 +1,3 @@
-// By Joel Isotalo
-
-
 // This code adds an event listener to the DOM which executes the "getPopular()" function when the DOM content has been fully loaded.
 document.addEventListener("DOMContentLoaded", function() {
     getPopular();
@@ -119,7 +116,7 @@ function getPopular() {
             document.getElementById("modal-tagline").innerHTML = `${data[0].tagline}`;
             document.getElementById("modal-body1").innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${data[0].poster_path}" alt="${data[0].title}" />`;
             document.getElementById("modal-body2").innerHTML = `${data[0].overview}`;
-            document.getElementById("modal-body3").innerHTML = `${movie.vote_average}`;
+            document.getElementById("modal-body3").innerHTML = `${parseFloat(movie.vote_average).toFixed(1)}`;
             document.getElementById("modal-body4").innerHTML = '<b>Cast:</b><br>';
             
             //Get the top 10 billed cast members and their corresponding characters
@@ -226,7 +223,7 @@ function getUpcoming() {
             document.getElementById("modal-tagline").innerHTML = `${data[0].tagline}`;
             document.getElementById("modal-body1").innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${data[0].poster_path}" alt="${data[0].title}" />`;
             document.getElementById("modal-body2").innerHTML = `${data[0].overview}`;
-            document.getElementById("modal-body3").innerHTML = `${movie.vote_average}`;
+            document.getElementById("modal-body3").innerHTML = `${parseFloat(movie.vote_average).toFixed(1)}`;
             document.getElementById("modal-body4").innerHTML = '<b>Cast:</b><br>';
             for (var i = 0; i < 10; i++) {
               try {
@@ -328,7 +325,7 @@ function getTopRated() {
               document.getElementById("modal-tagline").innerHTML = `${data[0].tagline}`;
               document.getElementById("modal-body1").innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${data[0].poster_path}" alt="${data[0].title}" />`;
               document.getElementById("modal-body2").innerHTML = `${data[0].overview}`;
-              document.getElementById("modal-body3").innerHTML = `${movie.vote_average}`;
+              document.getElementById("modal-body3").innerHTML = `${parseFloat(movie.vote_average).toFixed(1)}`;
               document.getElementById("modal-body4").innerHTML = '<b>Cast:</b><br>';
               for (var i = 0; i < 10; i++) {
                 try {
@@ -429,7 +426,7 @@ data.results.forEach(movie => {
               document.getElementById("modal-tagline").innerHTML = `${data[0].tagline}`;
               document.getElementById("modal-body1").innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${data[0].poster_path}" alt="${data[0].title}" />`;
               document.getElementById("modal-body2").innerHTML = `${data[0].overview}`;
-              document.getElementById("modal-body3").innerHTML = `${movie.vote_average}`;
+              document.getElementById("modal-body3").innerHTML = `${parseFloat(movie.vote_average).toFixed(1)}`;
               document.getElementById("modal-body4").innerHTML = '<b>Cast:</b><br>';
               for (var i = 0; i < 10; i++) {
                 try {
