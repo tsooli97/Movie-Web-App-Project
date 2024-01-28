@@ -84,7 +84,7 @@ function getPopular() {
         <img id="poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}" />
           <h1>${movie.title}</h1>
           <div class="divinfo">Audience score:</div>
-          <p class="info" id="score">${movie.vote_average}</p>
+          <p class="info" id="score">${parseFloat(movie.vote_average).toFixed(1)}</p>
           <p class="info"><b>Release date</b><br>${movie.release_date}</p>
           <p class="info"><b>Synopsis</b><br>${movie.overview}</p>`;
         //Execute another API call to receive credits data for each of the displayed movies using their individual IDs
