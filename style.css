@@ -115,17 +115,6 @@ input:focus::placeholder {
   font-weight: bold;
 }
 
-#score {
-    font-size: 150%;
-    padding: 5px;
-    display: flex;
-    background-color: rgb(138, 179, 255);
-    width: 29px;
-    border-radius: 5px;
-
-    
-}
-
 .divinfo {
     padding-top: 7px;
     float: left;
@@ -192,3 +181,15 @@ input:focus::placeholder {
     border-radius: 5px;
     text-align: center; 
 }
+
+#score {
+	margin-top: 2vh;
+	
+}
+
+.score-container {
+    display: flex;
+    align-items: center;
+}
+
+
